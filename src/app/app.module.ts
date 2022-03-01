@@ -18,8 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { environment } from 'src/environments/environment';
 
 import { AuthModule } from './auth/auth.module';
-import { SharedModule } from './shared/shared.module';
-import { IngresoEgresoModule } from './ingreso-egreso/ingreso-egreso.module';
+
+
 
 @NgModule({
   declarations: [
@@ -29,12 +29,8 @@ import { IngresoEgresoModule } from './ingreso-egreso/ingreso-egreso.module';
   imports: [
     BrowserModule,
     AuthModule,
-   
-    IngresoEgresoModule,
-
-    AppRoutingModule,
-   
-  
+    
+    AppRoutingModule,  
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
