@@ -20,8 +20,9 @@ export class SideBarComponent implements OnInit, OnDestroy {
     private store: Store<AppState>) { }
 
   ngOnInit(): void {
-    this.nombreSubs=this.store.select('user').subscribe((user)=>{
-      this.nombre = user.user.nombre
+    this.nombreSubs=this.store.select('user')
+    .subscribe((user)=>{
+      this.nombre = user.user?.nombre
 
     })
 
